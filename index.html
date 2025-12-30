@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal portfolio website-easy Tutorial</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+</head>
+<script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+
+<script>
+(function(){
+    emailjs.init("YtzExoxloWlg3fO3W");
+})();
+</script>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    const form = document.getElementById("contact-form");
+
+    form.addEventListener("submit", function (e) {
+        e.preventDefault();
+
+        emailjs.sendForm(
+            "service_beth81a",
+            "template_r977njd",
+            this
+        ).then(
+            function () {
+                alert("Message sent successfully! ✅");
+            },
+            function (error) {
+                alert("Failed to send message 😢");
+                console.log(error);
+            }
+        );
+
+        this.reset();
+    });
+});
+</script>
+
+
+<body>
+    <div id="header">
+    <div class="container">
+       <nav>
+    <h1><span>A</span>kshit .</h1>
+
+    <ul id="sidemenu">
+        <li><a href="#header">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#portfolio">Portfolio</a></li>
+        <li><a href="#contact">Contact</a></li>
+
+        <i class="fa-solid fa-circle-xmark menu-close" onclick="closemenu()"></i>
+    </ul>
+
+    <i class="fa-solid fa-list menu-open" onclick="openmenu()"></i>
+</nav>
+
+        <div class="header-text">
+            <p> Web Developer/UI Designer</p>
+            <h1> 
+                Hi, I'm <span>Akshit </span><br> Web Developer from Himachal Pradesh
+            </h1>
+        </div>
+         </div>
+    </div>
+    <!-------------about---------->
+        <div id="about">
+            <div class="container">
+                <div class="row">
+                    <div class="about-colo-1">
+                        <img src="images/ChatGPT Image Dec 30, 2025, 07_29_53 PM (1).png" >
+                    </div>
+                    <div class="about-colo-2">
+                        <h1 class="sub-title">
+                            About Me
+                        </h1>
+                       <p>
+I am a passionate Full Stack Web Developer and Computer Science Engineering student with hands-on experience in building responsive and scalable web applications. I specialize in the MERN stack and have worked on real-world projects involving RESTful APIs, database design, and dynamic user interfaces. Through internships at CS Infotech and project-based learning, I have developed strong problem-solving skills and a deep understanding of modern web technologies.
+</p>
+
+                        <div class="tab-titles">
+                            <p class="tab-links active-link" onclick="opentab('skills')">
+                                Skills
+                            </p>
+                            <p class="tab-links" onclick="opentab('experience')">
+                                Experience
+                            </p>
+                            <p class="tab-links" onclick="opentab('education')">
+                                Education
+                            </p>
+                            </div>
+                           
+                            <div class="tab-contents active-tab" id="skills">
+                            <ul>
+    <li>
+        <span>Frontend Development</span><br>
+        HTML, CSS, JavaScript, React, Tailwind CSS
+    </li>
+    <li>
+        <span>Backend Development</span><br>
+        Node.js, Express.js, RESTful APIs
+    </li>
+    <li>
+        <span>Database & Tools</span><br>
+        MongoDB, Firebase, Git, GitHub, VS Code
+    </li>
+</ul>
+
+                            </div>
+                            <div class="tab-contents"id="experience">
+                            <ul>
+    <li>
+        <span>Jun 2024 – Jul 2024</span><br>
+        Web Developer Intern – CS Infotech, Chandigarh<br>
+        Developed responsive full-stack MERN web applications and integrated RESTful APIs for dynamic data handling.
+    </li>
+    <li>
+        <span>Jan 2024 – Present</span><br>
+        Full Stack Web Development Projects<br>
+        Built multiple web applications including e-commerce platforms with authentication, cart systems, and order management.
+    </li>
+</ul>
+
+                            </div>
+                            <div class="tab-contents" id="education">
+                                <ul>
+                                  <li>
+        <span>2022 – 2026</span><br>
+        B.Tech in Computer Science & Engineering<br>
+        Himachal Pradesh Technical University
+    </li>
+                                    <li>
+                                      <span>
+2019-2020
+                                      </span>
+                                      <br>
+                                     X
+                                     <br>
+                                     Govt Model Sen. Sec. School Dhundla
+                                    </li>
+                                    <li>
+                                      <span>
+2021-2022
+                                      </span>
+                                      <br>
+                                      XII
+                                       <br>
+                                     Govt Model Sen. Sec. School Dhundla
+                                    </li>
+                                </ul>
+                            </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-------------------------services------------->
+        <div id="services">
+            <div class="container">
+                   <h1 class="sub-title">
+                          My Services
+                        </h1>
+                        <div class="services-list">
+                     <div>
+                    <i class="fa-solid fa-code" style="color: #FFD43B;"></i>
+                        <h2>Web Designing</h2>
+                       <p>
+Design and develop responsive, modern, and user-friendly websites using HTML, CSS, JavaScript, and React.
+</p>
+
+                        <a href="#">learn more</a>
+                     </div>       
+                     <div>
+                       <i class="fa-solid fa-crop" style="color: #FFD43B;"></i>
+                        <h2>website maintenance</h2>
+                       <p>
+Optimize website performance, fix bugs, improve responsiveness, and maintain scalable web solutions.
+</p>
+
+                        <a href="#">learn more</a>
+                     </div>       
+                     <div>
+                      <i class="fa-brands fa-app-store" style="color: #FFD43B;"></i>
+                        <h2>App designer</h2>
+                       <p>
+Design and develop cross-platform mobile applications using React Native. I build user-friendly and high-performance apps like <strong>BookMyTable</strong>, featuring real-time table booking, seat selection, and smooth navigation for both Android and iOS platforms.
+</p>
+
+                        <a href="#"></a>
+                     </div>       
+                        </div>
+            </div>
+        </div>
+        <!-- portfolio -->
+         <div id="portfolio">
+            <div class="container">
+                <h1 class="sub-title"> My Work</h1>
+                <div class="worklist">
+                    <div class="work">
+                        <img src="images/work-1.png" >
+                        <div class="layer">
+                            <h3>Multi-category E-Commerce Website</h3>
+<p>
+A full-stack MERN e-commerce web application featuring product categories, shopping cart, order management, and responsive design.
+</p>
+
+                            <a href="#"><i class="fa-solid fa-link" style="color: #FFD43B;"></i></a>
+                        </div>
+                        
+                    </div>
+                    <div class="work">
+                        <img src="images/work-2.png" >
+ <div class="layer">
+                            <h3>BookMyTable Web App</h3>
+<p>
+A responsive web application for restaurant table booking with real-time availability and user-friendly UI.
+</p>
+
+                            <a href="#"><i class="fa-solid fa-link" style="color: #FFD43B;"></i></a>
+                        </div>
+                    </div>
+                    <div class="work">
+                        <img src="images/work-3.png" >
+ <div class="layer">
+                            <h3>Waste Cycle – Waste Management System</h3>
+<p>
+A web-based project demonstrating the complete waste management lifecycle, from waste generation and collection to segregation, recycling, and final disposal. The project emphasizes the 3Rs (Reduce, Reuse, Recycle) and showcases how proper waste handling and recycling practices help minimize environmental pollution and promote sustainability through practical models and real-world examples.
+</p>
+
+                            <a href="#"><i class="fa-solid fa-link" style="color: #FFD43B;"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <a href="#" class="btn">See More</a>
+            </div>
+
+         </div>
+
+         <!-- contact -->
+          <div id="contact">
+            <div class="container">
+              <div class="row">
+                <div class="contact-left">
+                    <h1 class="sub-title"> contact Me</h1>
+                    <p><i class="fa-solid fa-envelope"></i> dhimanakshu870@gmail.com</p>
+<p><i class="fa-solid fa-mobile"></i> +91 8219731543</p>
+
+                    <div class="social-icon">
+                        <a href="mailto:dhimanakshu870@gmail.com">
+                           <i class="fa-solid fa-envelope" style="color: #FFD43B;"></i>
+                        </a>
+                        <a href="www.linkedin.com/in/
+akshit-dhiman-6627022a8
+" target="_blank" title="LinkedIn Profile">
+                          <i class="fa-brands fa-linkedin" style="color: #FFD43B;"></i>
+                        <a href="https://github.com/rollchai" target="_blank" title="GitHub Profile">
+    <i class="fa-brands fa-github" style="color: #FFD43B;"></i>
+</a>
+
+
+<a href="images/AkshitDhiman_InternshalaResume.pdf" download class="btn btn2">Download CV</a>
+                    </div>
+                </div>
+                <div class="contact-right">
+<form id="contact-form">
+    <input type="text" name="name" placeholder="Your Name" required>
+    <input type="email" name="email" placeholder="Your Email" required>
+    <textarea name="message" rows="6" placeholder="Your Message"></textarea>
+    <button type="submit" class="btn btn2">Submit</button>
+</form>
+
+                </div>
+              </div> 
+              <div class="copyright">
+                <p>Lorem ipsum dolor sit<i class="fa-solid fa-heart" style="color: #FFD43B;"></i> amet consectetur adipisicing elit. Animi, harum cum! Temporibus, est recusandae atque consequatur rem reprehenderit, distinctio saepe quis nulla odio veniam natus aspernatur numquam vero, quia illum doloremque sunt tempora voluptates velit iste! Ipsum perferendis dolorem aliquam.</p>
+
+              </div> 
+            </div>
+          </div>
+<script>
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+
+    function opentab(tabname) {
+
+        for (let link of tablinks) {
+            link.classList.remove("active-link");
+        }
+
+        for (let content of tabcontents) {
+            content.classList.remove("active-tab");
+        }
+
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+</script>
+
+
+ <script>
+    const sidemenu = document.getElementById("sidemenu");
+
+    function openmenu() {
+        sidemenu.style.right = "0px";
+    }
+
+    function closemenu() {
+        sidemenu.style.right = "-200px";
+    }
+</script>
+
+
+
+  
+</body>
+</html>
